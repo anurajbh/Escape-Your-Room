@@ -8,7 +8,7 @@ public class PlayerCharacter : MonoSingleton<PlayerCharacter>
     [SerializeField] float buttonMashThreshold = 0.1f;
     [SerializeField] float buttonMashMaxScaleFactor = 2.0f;
 
-    [SerializeField] bool isButtonMashing = false;
+    //[SerializeField] bool isButtonMashing = false;
     [SerializeField] float buttonMashTimer = 0f;
     private Rigidbody2D rb;
 

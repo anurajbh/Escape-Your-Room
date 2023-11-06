@@ -44,3 +44,9 @@ TagManager:
   - name: Player
     uniqueID: 3654243181
     locked: 0
+  - name: Bubbles
+    uniqueID: 630798963
+    locked: 0
+  - name: Text
+    uniqueID: 3105473009
+    locked: 0

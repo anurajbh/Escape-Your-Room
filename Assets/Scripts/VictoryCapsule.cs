@@ -11,10 +11,11 @@ public class VictoryCapsule : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.gameObject);
         if(collision.gameObject.CompareTag("Player"))
         {
             victoryPanel.SetActive(true);
+            //pause the game
+            Time.timeScale = 0.0f;
         }
     }
 }

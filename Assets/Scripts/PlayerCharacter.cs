@@ -11,7 +11,7 @@ public class PlayerCharacter : MonoSingleton<PlayerCharacter>
     [SerializeField] private int _lives;
     [SerializeField] GameObject defeatPanel;
     //bool to keep track of whether player is moving forward
-    [SerializeField] bool isMovingForward = false;
+    public bool isMovingForward = false;
     int maxLives;
     //life property because it seems like better practice than just having it as a field and also satisfies principle of encapsulation. Should probably refactor previous stuff as well as a stretch goal
     public int Lives 

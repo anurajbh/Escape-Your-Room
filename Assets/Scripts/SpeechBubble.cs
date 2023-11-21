@@ -28,14 +28,14 @@ public class SpeechBubble : MonoBehaviour
             // If the ray intersects with the speech bubble, destroy it
             if (hit)
             {
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
         }
 
         // Limit the size of the speech bubble
         if (transform.localScale.x >= maxScale || transform.localScale.y >= maxScale)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

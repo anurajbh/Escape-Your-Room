@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class SpeechBubbleSpawnManager : MonoSingleton<SpeechBubbleSpawnManager>
 {
-    public GameObject speechBubblePrefab;
+    public List<GameObject> speechBubblePrefab = new List<GameObject>();
     public float spawnInterval = 2f;
     public Vector2 spawnPositionOffset;
 
     [SerializeField] float spawnTimer = 0f;
+    [SerializeField] int randomIndex = 0;
 
     private void Start()
     {
         Vector3 spawnPosition = PlayerCharacter.Instance.transform.position + new Vector3(Random.Range(spawnPositionOffset.x / 2f, spawnPositionOffset.x), Random.Range(spawnPositionOffset.y / 2f, spawnPositionOffset.y), 0f);
-        Instantiate(speechBubblePrefab, spawnPosition, Quaternion.identity);
+        randomIndex = Random.Range(0, speechBubblePrefab.Count);
+        Instantiate(speechBubblePrefab[randomIndex], spawnPosition, Quaternion.identity);
     }
     private void Update()
     {
@@ -28,7 +30,8 @@ public class SpeechBubbleSpawnManager : MonoSingleton<SpeechBubbleSpawnManager>
 
             // Instantiate a new speech bubble at the spawn position controlled by spawn position offset
             Vector3 spawnPosition = PlayerCharacter.Instance.transform.position+ new Vector3(Random.Range(spawnPositionOffset.x/2f, spawnPositionOffset.x), Random.Range(spawnPositionOffset.y / 2f, spawnPositionOffset.y), 0f);
-            Instantiate(speechBubblePrefab, spawnPosition, Quaternion.identity);
+            randomIndex = Mathf.Clamp(Random.Range(0, speechBubblePrefab.Count - 1), 0, speechBubblePrefab.Count - 1);
+            Instantiate(speechBubblePrefab[randomIndex], spawnPosition, Quaternion.identity);
         }
     }
 }

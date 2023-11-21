@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: rr23rdfsgegsrg
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 75b58c0a9ccc8164995a1fd19a71ad5e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7d1cfcee2733f234aa74e62dfb568acf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

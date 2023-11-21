@@ -1435,7 +1435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1866405886804852344, guid: 7db83576321e82444940b0588e4f2050, type: 3}
       propertyPath: speechBubblePrefab.Array.size
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1866405886804852344, guid: 7db83576321e82444940b0588e4f2050, type: 3}
       propertyPath: speechBubblePrefab.Array.data[0]
@@ -1449,6 +1449,34 @@ PrefabInstance:
       propertyPath: speechBubblePrefab.Array.data[2]
       value: 
       objectReference: {fileID: 5372262162088612568, guid: 3067a069923d17b438d62af740961320, type: 3}
+    - target: {fileID: 1866405886804852344, guid: 7db83576321e82444940b0588e4f2050, type: 3}
+      propertyPath: speechBubblePrefab.Array.data[3]
+      value: 
+      objectReference: {fileID: 5372262162088612568, guid: e54a0c97101c44343b3ccfc342eeeb61, type: 3}
+    - target: {fileID: 1866405886804852344, guid: 7db83576321e82444940b0588e4f2050, type: 3}
+      propertyPath: speechBubblePrefab.Array.data[4]
+      value: 
+      objectReference: {fileID: 5372262162088612568, guid: fe2f45da9befba74e972e02699b29797, type: 3}
+    - target: {fileID: 1866405886804852344, guid: 7db83576321e82444940b0588e4f2050, type: 3}
+      propertyPath: speechBubblePrefab.Array.data[5]
+      value: 
+      objectReference: {fileID: 5372262162088612568, guid: 8780ab1de5b2e5f48b0bea02da8b96a2, type: 3}
+    - target: {fileID: 1866405886804852344, guid: 7db83576321e82444940b0588e4f2050, type: 3}
+      propertyPath: speechBubblePrefab.Array.data[6]
+      value: 
+      objectReference: {fileID: 5372262162088612568, guid: 3f340ff96e50b394e83336675717dd1a, type: 3}
+    - target: {fileID: 1866405886804852344, guid: 7db83576321e82444940b0588e4f2050, type: 3}
+      propertyPath: speechBubblePrefab.Array.data[7]
+      value: 
+      objectReference: {fileID: 5372262162088612568, guid: 23f3346ed97f6e84797df61ec7d64e2f, type: 3}
+    - target: {fileID: 1866405886804852344, guid: 7db83576321e82444940b0588e4f2050, type: 3}
+      propertyPath: speechBubblePrefab.Array.data[8]
+      value: 
+      objectReference: {fileID: 5372262162088612568, guid: 76352174c535b5f4ca716e560117ae81, type: 3}
+    - target: {fileID: 1866405886804852344, guid: 7db83576321e82444940b0588e4f2050, type: 3}
+      propertyPath: speechBubblePrefab.Array.data[9]
+      value: 
+      objectReference: {fileID: 5372262162088612568, guid: 3c7c141152d45ac4e93778de1d507c3a, type: 3}
     - target: {fileID: 6326123030469264750, guid: 7db83576321e82444940b0588e4f2050, type: 3}
       propertyPath: m_Name
       value: SpawnManager

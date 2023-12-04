@@ -72,12 +72,17 @@ public class PlayerCharacter : MonoSingleton<PlayerCharacter>
         GameManager.Instance.animator.SetBool("isLyingDown", true);
         //set move forward bool to false
         isMovingForward = false;
+        //update lives in UI Manager
+        UIManager.Instance.UpdateLives();
     }
     //method that can be called using the Player Character's Instance to increment a life
     public void IncrementLives()
     {
         //clamp life value between 0 and max
         Mathf.Clamp(Lives++, 0, maxLives);
+        //update lives in UI Manager
+        UIManager.Instance.UpdateLives();
+
     }
     //method that checks if lives are 0 and enables defeat panel if so and pauses the game
     public void CheckForLoss()

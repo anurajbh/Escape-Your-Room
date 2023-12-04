@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class SidescrollingCamera : MonoSingleton<SidescrollingCamera>
 {
-    public Vector3 offset;
+    public float offset;
+    public bool followPlayer = false;
     private void LateUpdate()
     {
-        transform.position = PlayerCharacter.Instance.transform.position + offset;
+        if (followPlayer)
+        {
+            transform.position = new Vector3(PlayerCharacter.Instance.transform.position.x + offset, transform.position.y, transform.position.z);
+        }
     }
 }
+ 

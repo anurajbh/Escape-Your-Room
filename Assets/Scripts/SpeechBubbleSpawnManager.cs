@@ -15,11 +15,9 @@ public class SpeechBubbleSpawnManager : MonoSingleton<SpeechBubbleSpawnManager>
 
     private void Start()
     {
-        Vector3 spawnPosition = PlayerCharacter.Instance.transform.position + new Vector3(Random.Range(spawnPositionOffset.x / 2f, spawnPositionOffset.x), Random.Range(spawnPositionOffset.y / 2f, spawnPositionOffset.y), 0f);
         //no need to decrement by one as random.range is exclusive of max value
         maxIndex = tierOneCount;
         SetMaxIndexToSpawn(maxIndex);
-        Instantiate(speechBubblePrefabList[randomIndex], spawnPosition, Quaternion.identity);
     }
     private void Update()
     {
@@ -42,6 +40,10 @@ public class SpeechBubbleSpawnManager : MonoSingleton<SpeechBubbleSpawnManager>
     }    
     private void SpawnTheBubbleAtIndex(int indexToSpawn)
     {
+        if(maxIndex == 0)
+        {
+            return;
+        }
         // Instantiate a new speech bubble at the spawn position controlled by spawn position offset
         Vector3 spawnPosition = PlayerCharacter.Instance.transform.position + new Vector3(Random.Range(spawnPositionOffset.x / 2f, spawnPositionOffset.x), Random.Range(spawnPositionOffset.y / 2f, spawnPositionOffset.y), 0f);
         Instantiate(speechBubblePrefabList[indexToSpawn], spawnPosition, Quaternion.identity);

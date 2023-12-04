@@ -10,8 +10,8 @@ public class DefeatBox : MonoBehaviour
     bool canDecrement = true;
     private void Start()
     {
-        //should decrement by default
-        canDecrement = true;
+        canDecrement = false;
+        StartCoroutine(DecrementBeginningTimer());
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -41,12 +41,24 @@ public class DefeatBox : MonoBehaviour
         canDecrement = true;
 
     }
+    IEnumerator StartDecrementTimer()
+    {
+        yield return new WaitForSeconds(decrementTimer);
+        canDecrement = true;
+    }    
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             //make player get up on leaving bed trigger
             GameManager.Instance.animator.SetBool("isLyingDown", false);
+            canDecrement = false;
+            StartCoroutine(StartDecrementTimer());
         }
+    }
+    IEnumerator DecrementBeginningTimer()
+    {
+        yield return new WaitForSeconds(decrementTimer);
+        canDecrement = true;
     }
 }

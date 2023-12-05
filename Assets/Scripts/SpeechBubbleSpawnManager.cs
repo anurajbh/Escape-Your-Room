@@ -11,7 +11,7 @@ public class SpeechBubbleSpawnManager : MonoSingleton<SpeechBubbleSpawnManager>
 
     [SerializeField] float spawnTimer = 0f;
     [SerializeField] int randomIndex = 0;
-    [SerializeField] int maxIndex = 0;
+    public int maxIndex = 0;
 
     private void Start()
     {

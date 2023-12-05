@@ -8,6 +8,7 @@ public class DefeatBox : MonoBehaviour
     [SerializeField] float decrementTimer = 0f;
     //bool to lock or unlock the life decrementation
     bool canDecrement = true;
+    int lastKnownMaxIndexValue = 0;
     private void Start()
     {
         canDecrement = false;
@@ -19,6 +20,8 @@ public class DefeatBox : MonoBehaviour
         {
             //make the player lie down when entering bed trigger and start coroutine to decrement lives
             GameManager.Instance.animator.SetBool("isLyingDown", true);
+            lastKnownMaxIndexValue = SpeechBubbleSpawnManager.Instance.maxIndex;
+            SpeechBubbleSpawnManager.Instance.SetMaxIndexToSpawn(0);
             StartCoroutine(DecrementLiveCoroutine());
         }
     }
@@ -28,6 +31,7 @@ public class DefeatBox : MonoBehaviour
         {
             //ensure the player continues to lie down when within bed trigger
             GameManager.Instance.animator.SetBool("isLyingDown", true);
+            SpeechBubbleSpawnManager.Instance.SetMaxIndexToSpawn(0);
         }
     }
     IEnumerator DecrementLiveCoroutine()
@@ -53,6 +57,7 @@ public class DefeatBox : MonoBehaviour
             //make player get up on leaving bed trigger
             GameManager.Instance.animator.SetBool("isLyingDown", false);
             canDecrement = false;
+            SpeechBubbleSpawnManager.Instance.SetMaxIndexToSpawn(lastKnownMaxIndexValue);
             StartCoroutine(StartDecrementTimer());
         }
     }

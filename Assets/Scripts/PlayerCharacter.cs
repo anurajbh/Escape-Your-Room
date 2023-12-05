@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerCharacter : MonoSingleton<PlayerCharacter>
 {
     [SerializeField] float moveSpeed = 5f;
@@ -9,10 +9,10 @@ public class PlayerCharacter : MonoSingleton<PlayerCharacter>
     [SerializeField] float buttonMashMaxScaleFactor = 2.0f;
     //life field
     [SerializeField] private int _lives;
-    [SerializeField] GameObject defeatPanel;
     //bool to keep track of whether player is moving forward
     public bool isMovingForward = false;
     int maxLives;
+    public int defeatIndex;
     //life property because it seems like better practice than just having it as a field and also satisfies principle of encapsulation. Should probably refactor previous stuff as well as a stretch goal
     public int Lives 
     { 
@@ -89,8 +89,7 @@ public class PlayerCharacter : MonoSingleton<PlayerCharacter>
     {
         if(Lives <= 0)
         {
-            defeatPanel.SetActive(true);
-            Time.timeScale = 0.0f;
+            SceneManager.LoadScene(defeatIndex);
         }
     }
     

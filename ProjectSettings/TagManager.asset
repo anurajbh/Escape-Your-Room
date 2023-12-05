@@ -41,12 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
+  - name: Door
+    uniqueID: 1412201879
+    locked: 0
+  - name: Floor
+    uniqueID: 622913401
+    locked: 0
+  - name: Props
     uniqueID: 3654243181
     locked: 0
   - name: Bubbles
     uniqueID: 630798963
     locked: 0
-  - name: Text
+  - name: Player
     uniqueID: 3105473009
     locked: 0

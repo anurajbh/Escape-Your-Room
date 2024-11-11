@@ -670,6 +670,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: 2.14
   followPlayer: 0
+  smoothSpeed: 0.125
+  threshold: 1
 --- !u!1 &587551832
 GameObject:
   m_ObjectHideFlags: 0
